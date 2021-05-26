@@ -37,6 +37,8 @@
     "eslint": "^7.27.0",
     "esno": "*",
     "jest": "^27.0.1",
+    "jsdom": "16.6.0",
+    "jsdom-global": "3.0.2",
     "nodemon": "^2.0.7",
     "rimraf": "^3.0.2",
     "rollup-plugin-esbuild": "^4.2.3",
