@@ -22,7 +22,8 @@
     "release": "release-it --ci",
     "release:beta": "release-it --preReleaseId=beta --preRelease --ci",
     "release:minor": "release-it minor --ci",
-    "release:minor:beta": "release-it minor --preReleaseId=beta --preRelease --ci"
+    "release:minor:beta": "release-it minor --preReleaseId=beta --preRelease --ci",
+    "cm": "test-cm"
   },
   "keywords": [
     "template",
@@ -42,6 +43,7 @@
     "conventional-changelog-cli": "^2.1.1",
     "eslint": "^7.27.0",
     "esno": "*",
+    "git-commit-lint": "~1.0.0",
     "jest": "^27.0.1",
     "jsdom": "16.6.0",
     "jsdom-global": "3.0.2",
@@ -50,6 +52,26 @@
     "rimraf": "^3.0.2",
     "rollup-plugin-esbuild": "^4.2.3",
     "ts-jest": "^27.0.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "husky": "~4.3.4",
+    "commitizen": "~4.2.2",
+    "cz-customizable": "~6.3.0",
+    "commitlint": "~11.0.0",
+    "@commitlint/config-conventional": "~11.0.0"
+  },
+  "commitlint": {
+    "extends": [
+      "./node_modules/git-commit-lint/rules/lint-config.js"
+    ]
+  },
+  "config": {
+    "cz-customizable": {
+      "config": "./node_modules/git-commit-lint/rules/cz-config.js"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
   }
 }
