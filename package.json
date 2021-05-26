@@ -1,0 +1,41 @@
+{
+  "name": "@template-pro/ts-library",
+  "version": "0.0.1",
+  "preview": true,
+  "description": "The TypeScript library template",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist",
+    "src",
+    "types"
+  ],
+  "scripts": {
+    "start": "nodemon",
+    "lint": "eslint src/*.ts",
+    "clean":"rimraf dist types",
+    "prebuild": "npm run clean && tsc --emitDeclarationOnly",
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "template",
+    "typescript",
+    "jest"
+  ],
+  "author": {
+    "name": "Wxh16144",
+    "email": "wxh16144@qq.com",
+    "url": "https://github.com/wxh16144"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "esno": "*",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2",
+    "rollup-plugin-esbuild": "^4.2.3",
+    "typescript": "^4.2.4"
+  }
+}
