@@ -5,6 +5,7 @@
   "description": "The TypeScript library template",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
+  "types": "types/index.d.ts",
   "files": [
     "dist",
     "src",
