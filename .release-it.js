@@ -4,7 +4,7 @@ module.exports = {
   git: {
     requireCleanWorkingDir: true,
     requireUpstream: false,
-    commitMessage: 'build: release ${version}',
+    commitMessage: 'release: ${version}',
     tagAnnotation: 'Release ${version}',
     tagName: '${version}',
     push: true,
