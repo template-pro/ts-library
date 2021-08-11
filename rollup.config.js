@@ -1,5 +1,6 @@
 import { resolve } from 'path'
 import esbuild from 'rollup-plugin-esbuild'
+import buble from '@rollup/plugin-buble'
 
 import pkg from './package.json'
 
@@ -25,6 +26,7 @@ export default {
     },
   ],
   plugins: [
-    esbuild()
+    esbuild(),
+    buble(),
   ],
 }
