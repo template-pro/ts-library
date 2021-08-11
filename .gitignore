@@ -4,6 +4,7 @@ dist
 build
 coverage
 types
+docs
 # local env files
 .env.local
 .env.*.local

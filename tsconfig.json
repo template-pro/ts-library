@@ -9,5 +9,10 @@
     "strict": true,
     "moduleResolution": "node"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "out": "docs",
+    "theme": "minimal"
+  }
 }

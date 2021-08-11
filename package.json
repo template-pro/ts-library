@@ -20,6 +20,7 @@
     "prebuild": "npm run clean && tsc --emitDeclarationOnly",
     "build": "rollup -c",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "docs": "typedoc",
     "release": "release-it --ci",
     "release:beta": "release-it --preReleaseId=beta --preRelease --ci",
     "release:minor": "release-it minor --ci",
