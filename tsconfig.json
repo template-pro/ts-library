@@ -1,9 +1,9 @@
 {
+  "$schema": "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "es2015",
     "module": "ESNext",
     "declaration": true,
-    "declarationDir": "types",
     "outDir": "./dist",
     "baseUrl": "./",
     "strict": true,

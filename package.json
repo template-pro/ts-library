@@ -5,19 +5,18 @@
   "description": "The TypeScript library template",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
-  "types": "types/index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src",
-    "types"
+    "dist"
   ],
   "scripts": {
     "start": "nodemon",
     "lint": "eslint src/*.ts",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "clean": "rimraf dist types",
-    "prebuild": "npm run clean && tsc --emitDeclarationOnly",
+    "prebuild": "npm run clean && tsc --emitDeclarationOnly  --outDir temp --p . && npm run roll-types",
+    "clean": "rimraf dist types temp",
+    "roll-types": "api-extractor run && rimraf temp",
     "build": "rollup -c",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "docs": "typedoc",
@@ -39,6 +38,7 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.18.5",
     "@rollup/plugin-buble": "^0.21.3",
     "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
