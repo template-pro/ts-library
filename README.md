@@ -8,6 +8,12 @@
 
 [Create a repo from this template on GitHub.](https://github.com/template-pro/ts-library/generate)
 
+### Use [degit](https://github.com/Rich-Harris/degit)
+
+```bash
+npx tiged https://github.com/template-pro/ts-library#master -m=git my-project
+```
+
 ### Clone to local
 
 ```bash
