@@ -1,3 +1,4 @@
+import { defineConfig } from 'rollup'
 import { resolve } from 'path'
 import esbuild from 'rollup-plugin-esbuild'
 import buble from '@rollup/plugin-buble'
@@ -11,7 +12,7 @@ const banner = `/*!
 * (c) ${new Date().getFullYear()} ${pkg.author.name}<${pkg.author.email}>
 */`
 
-export default {
+export default defineConfig({
   input: resolve(__dirname, 'src/index.ts'),
   output: [
     {
@@ -41,4 +42,4 @@ export default {
     esbuild(),
     buble(),
   ],
-}
+})
