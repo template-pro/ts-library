@@ -25,7 +25,7 @@
     "release:beta": "release-it --preReleaseId=beta --preRelease --ci",
     "release:minor": "release-it minor --ci",
     "release:minor:beta": "release-it minor --preReleaseId=beta --preRelease --ci",
-    "cm": "test-cm"
+    "cm": "git-commit"
   },
   "keywords": [
     "template",
@@ -39,10 +39,11 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@commitlint/config-conventional": "~11.0.0",
     "@microsoft/api-extractor": "^7.18.5",
     "@rollup/plugin-buble": "^0.21.3",
     "@types/jest": "^26.0.23",
+    "@wuxh/commitlint-config": "0.0.2",
+    "@wuxh/commitzen-config": "0.0.3",
     "@wuxh/eslint-config-ts": "0.0.3",
     "commitizen": "~4.2.2",
     "commitlint": "~11.0.0",
@@ -50,7 +51,6 @@
     "cz-customizable": "~6.3.0",
     "eslint": "^7.27.0",
     "esno": "*",
-    "git-commit-lint": "~1.0.0",
     "husky": "~4.3.4",
     "jest": "^27.0.1",
     "jsdom": "16.6.0",
@@ -66,13 +66,11 @@
     "typescript": "^4.2.4"
   },
   "commitlint": {
-    "extends": [
-      "./node_modules/git-commit-lint/rules/lint-config.js"
-    ]
+    "extends": "@wuxh/commitlint-config"
   },
   "config": {
     "cz-customizable": {
-      "config": "./node_modules/git-commit-lint/rules/cz-config.js"
+      "config": "./node_modules/@wuxh/commitzen-config"
     }
   },
   "husky": {
@@ -85,7 +83,6 @@
   "lint-staged": {
     "src/**/*.{ts}": [
       "npm run lint:fix",
-      "npm run lint",
       "git add"
     ]
   }
