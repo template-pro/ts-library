@@ -2,7 +2,8 @@
   "extends": "@wuxh/eslint-config-ts",
   "ignorePatterns": [
     "dev",
-    "test/*"
+    "test/*",
+    "dist"
   ]
 }
 
